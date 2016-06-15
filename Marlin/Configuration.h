@@ -34,14 +34,14 @@ Here are some standard links for getting your machine calibrated:
 #define SCARA
 #define scara_segments_per_second 180 // too much will decrease performance!
 // Length of inner support arm
-#define Linkage_1 122 // mm - Preprocessor cannot handle decimal points...
+#define Linkage_1 150 // mm - Preprocessor cannot handle decimal points...
 // Length of outer support arm
-#define Linkage_2 126 // mm - Preprocessor cannot handle decimal points...
+#define Linkage_2 150 // mm - Preprocessor cannot handle decimal points...
 
 // SCARA tower offset (position of Tower relative to bed zero position)
 // This needs to be reasonably accurate as it defines the printbed position in the SCARA space.
-#define SCARA_offset_x   30 // mm
-#define SCARA_offset_y -100 // mm
+#define SCARA_offset_x   0 // mm
+#define SCARA_offset_y -70 // mm
 #define SCARA_RAD2DEG 57.2957795  // to convert RAD to degrees
 
 #define THETA_HOMING_OFFSET 0 // calculatated from command M360 / M114
@@ -71,7 +71,7 @@ Here are some standard links for getting your machine calibrated:
 #define SERIAL_PORT 0
 
 // This determines the communication speed of the printer
-#define BAUDRATE 250000
+#define BAUDRATE 115200
 
 // This enables the serial port associated to the Bluetooth interface
 //#define BTENABLED              // Enable BT interface on AT90USB devices
@@ -79,11 +79,11 @@ Here are some standard links for getting your machine calibrated:
 // The following define selects which electronics board you have.
 // Please choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-	#define MOTHERBOARD BOARD_PRINTRBOARD
+	#define MOTHERBOARD BOARD_RAMPS_13_EFB
 #endif
 
 // Define this to set a custom name for your generic Mendel,
- #define CUSTOM_MENDEL_NAME "Winston"
+ #define CUSTOM_MENDEL_NAME "Scara_arm"
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
